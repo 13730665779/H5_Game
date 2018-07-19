@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>植物大战僵尸</title>
+    <script src="js/Plant.js"></script>
+    <script src="./js/Zombie.js"></script>
+    <script src="./js/Icon.js"></script>
+    <script src="./js/Map.js"></script>
+    <script src="./js/Menu.js"></script>
+    <script src="./js/Game.js"></script>
+    <style type="text/css">
+        body {
+            background-image: url("./img/bg.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    </style>
+</head>
+<body onload="start()">
+<div id="box" style="width: 900px;height: 600px;margin: auto" >
+    <canvas id="myCanvas" width="900px" height="600px" style="border: 1px solid #d3d3d3">
+    </canvas>
+</div>
+</body>
+<script>
+    function start() {
+        game = new Game();
+
+        game.init();
+        
+        setInterval('game.run()',200);
+    }
+</script>
+
+</html>

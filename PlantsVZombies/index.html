@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/PeaShooter.js"></script>
+		<script src="js/Zombie.js"></script>
+		<script src="js/Plants.js"></script>
+		<script src="js/Car.js"></script>
+		<script src="js/Lawn.js"></script>
+		<script src="js/Map.js"></script>
+	    <script src="js/Load.js"></script>
+		<script src="js/StartGame.js"></script>
+		<link rel="stylesheet" href="css/start_background.css" />
+	    
+	</head>
+	<body>
+		<!--游戏盒子-->
+		<div id="box">
+			<!--开始界面-->
+			<div id="start">
+							
+				<div id="startGame" onclick="Choose()"></div>
+			<div id="littleGame"></div>
+			<div id="chooseMenu">
+				<div id="box1">
+					<ul>
+						<li id="first">第一关</li>
+					</ul>
+				</div>
+			   <div class="back">
+			   	<h1>返</h1><h1>回</h1>
+			   </div>			   
+			</div>
+			
+		</div>
+		</div>
+		
+		
+		<script type="text/javascript">
+		 window.onload = function (){
+		 	//获取first的节点
+		 	var click = document.getElementById("first");
+		 	//获取一个Load()函数的对象
+		 	var load = new Load();
+		 	//获取定时器的对象
+		 	var timer;
+		 	
+		 	click.onclick = function () {
+	    		//获取定时器的对象
+	    		timer = setInterval(function(){
+	    			//初始化load对象
+	    			load.init(timer);
+	    		},1000);
+	    		//此处有问题，为什么1000可以，900以下都不行？？？？？？？？
+		    }
+		 	
+		 	
+		 }
+		   
+	</script>
+	</body>
+	
+</html>

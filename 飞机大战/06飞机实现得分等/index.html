@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>飞机游戏</title>
+    <script src="js/Life.js"></script>
+    <script src="js/EnemyBullet.js"></script>
+    <script src="js/Emeny.js"></script>
+    <script src="js/Bullet.js"></script>
+    <script src="js/Plyaer.js"></script>
+    <script src="js/Map.js"></script>
+    <script src="js/Game.js"></script>
+</head>
+<body onload="start()">
+
+</body>
+
+<script>
+
+
+
+    
+    function start() {
+    	//创建一个game对象
+        game = new Game();
+        //初始化game对象
+        game.init();
+        //设置定时器
+        setInterval('game.run()',100);
+         //键盘事件通过body来操控Game函数中的键盘事件
+        document.onkeypress=function (ev) {
+        	//game调用Game函数中的onkeypress键盘事件，ev是按下键盘传入的参数
+            game.onkeypress(ev.keyCode);
+        }
+    }
+
+</script>
+</html>
