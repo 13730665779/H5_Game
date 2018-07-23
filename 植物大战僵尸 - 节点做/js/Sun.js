@@ -36,10 +36,9 @@ function Sun() {
 	}
 
 	var callBack;
-	this.setSunNumListener = function(call) {
-		callBack = call;
-
-	}
+    this.setSunNumListener = function(call) {
+        callBack = call;
+    }
 
 	this.clickSun = function() {
 

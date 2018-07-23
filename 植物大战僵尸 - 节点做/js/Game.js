@@ -167,25 +167,18 @@ function Game() {
 		box2.style.display = "none";
 		mymap = new Map();
 		//初始化地图
-
 		mymap.init(box);
-		
-		
-
 	}
-    
-    
-	this.run = function() {
 
+
+	this.run = function() {
 		switch(state) {
-            
             case GAME_NORMAL: 
             break;
             
 			case GAME_RUN:
 				time++;
-
-                 
+				//豌豆的运动
 				peaShooters.forEach(function(peaShooter) {
 
 					peaShooter.run();
@@ -207,7 +200,10 @@ function Game() {
 				})
                 //太阳的掉落
 				sun.run();
-                  
+
+                if(sunNum>=100){
+                    plants.run();
+                }
 				break;
 				
 				case GAME_OVER:
